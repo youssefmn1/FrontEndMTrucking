@@ -19,6 +19,7 @@ import {
   ClockIcon,
   CreditCardIcon,
   Bars3Icon,
+  UserIcon,
 } from "@heroicons/react/24/solid";
 import {
   useMaterialTailwindController,
@@ -109,7 +110,7 @@ export function DashboardNavbar() {
             <MenuList className="w-max border-0">
               <MenuItem className="flex items-center gap-3">
                 <Avatar
-                  src="https://demos.creative-tim.com/material-dashboard/assets/img/team-2.jpg"
+                  src="/img/bruce-mars.jpeg"
                   alt="item-1"
                   size="sm"
                   variant="circular"
@@ -120,7 +121,7 @@ export function DashboardNavbar() {
                     color="blue-gray"
                     className="mb-1 font-normal"
                   >
-                    <strong>New message</strong> from Laur
+                    <strong>Nouvelle demande</strong> de Yassinox
                   </Typography>
                   <Typography
                     variant="small"
@@ -133,7 +134,7 @@ export function DashboardNavbar() {
               </MenuItem>
               <MenuItem className="flex items-center gap-4">
                 <Avatar
-                  src="https://demos.creative-tim.com/material-dashboard/assets/img/small-logos/logo-spotify.svg"
+                  src="/img/bruce-mars.jpeg"
                   alt="item-1"
                   size="sm"
                   variant="circular"
@@ -144,7 +145,7 @@ export function DashboardNavbar() {
                     color="blue-gray"
                     className="mb-1 font-normal"
                   >
-                    <strong>New album</strong> by Travis Scott
+                    <strong>Nouvelle demande</strong> de Youssef
                   </Typography>
                   <Typography
                     variant="small"
@@ -157,7 +158,7 @@ export function DashboardNavbar() {
               </MenuItem>
               <MenuItem className="flex items-center gap-4">
                 <div className="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-tr from-blue-gray-800 to-blue-gray-900">
-                  <CreditCardIcon className="h-4 w-4 text-white" />
+                  <UserIcon className="h-4 w-4 text-white" />
                 </div>
                 <div>
                   <Typography
@@ -165,7 +166,7 @@ export function DashboardNavbar() {
                     color="blue-gray"
                     className="mb-1 font-normal"
                   >
-                    Payment successfully completed
+                    <strong>Nouvelle demande</strong> de Simo
                   </Typography>
                   <Typography
                     variant="small"

@@ -32,7 +32,7 @@ export function Sidenav({ brandImg, brandName, routes }) {
             variant="h6"
             color={sidenavType === "dark" ? "white" : "blue-gray"}
           >
-            {brandName}
+            M-Trucking
           </Typography>
         </Link>
         <IconButton
