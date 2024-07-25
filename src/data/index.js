@@ -8,4 +8,5 @@ export * from "@/data/projects-data";
 export * from "@/data/authors-table-data";
 export * from "@/data/platform-settings-data-exp"
 export * from "@/data/platform-settings-data-trsp"
+export * from "@/data/transporteurs-table-data"
 
