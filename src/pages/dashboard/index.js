@@ -5,5 +5,6 @@ export * from "@/pages/dashboard/notifications";
 export * from "@/pages/dashboard/profileE"
 export * from "@/pages/dashboard/profileAdmin"
 export * from "@/pages/dashboard/transporteurs"
+export * from "@/pages/dashboard/expediteurs"
 
 

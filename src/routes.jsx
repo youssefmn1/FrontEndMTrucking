@@ -8,7 +8,7 @@ import {
   RectangleStackIcon,
   UserIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Tables, Notifications, ProfileExpediteur, ProfileAdmin, ProfileTransporteur, TransporteursTable } from "@/pages/dashboard";
+import { Home, Tables, Notifications, ProfileExpediteur, ProfileAdmin, ProfileTransporteur, TransporteursTable, ExpediteursTable } from "@/pages/dashboard";
 import { SignIn, SignUp } from "@/pages/auth";
 
 const icon = {
@@ -33,28 +33,29 @@ export const routes = [
       },
       {
         icon: <UserCircleIcon {...icon} />,
-        name: "Expediteur",
+        name: "Profile Expediteur",
         path: "/expediteur",
         element: <ProfileExpediteur />,
       },
       {
         icon: <TruckIcon {...icon} />,
-        name: "Transporteur",
+        name: "Profile Transporteur",
         path: "/transporteur",
         element: <ProfileTransporteur />,
-      },
-     {
+      },     
+      {
         icon: <TableCellsIcon {...icon} />,
-        name: "tables",
-        path: "/tables",
-        element: <Tables />,
+        name:"Expediteurs",
+        path: "/expediteurList",
+        element: <ExpediteursTable />,
       },
       {
-        icon: <InformationCircleIcon {...icon} />,
-        name: "Transporteur",
-        path: "/transporteurlist",
+        icon: <TruckIcon {...icon} />,
+        name: "Transporteurs",
+        path: "/transporteurList",
         element: <TransporteursTable />,
       },
+
       {
         icon: <InformationCircleIcon {...icon} />,
         name: "notifications",
