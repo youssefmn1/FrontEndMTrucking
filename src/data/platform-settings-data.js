@@ -4,35 +4,31 @@ export const platformSettingsData = [
     options: [
       {
         checked: true,
-        label: "Email me when someone follows me",
-      },
-      {
-        checked: false,
-        label: "Email me when someone answers on my post",
+        label: "Envoyer un Email lors d'une nouvelle demande de transport",
       },
       {
         checked: true,
-        label: "Email me when someone mentions me",
+        label: "Envoyer un Email en cas de problème",
+      },
+      {
+        checked: false,
+        label: "Envoyez-moi un e-mail lorsque quelqu'un me mentionne",
       },
     ],
   },
-  {
+ /* {
     title: "application",
     options: [
       {
         checked: false,
-        label: "New launches and projects",
+        label: "Nouveau compte d'un expéditeur",
       },
       {
         checked: true,
-        label: "Monthly product updates",
-      },
-      {
-        checked: false,
-        label: "Subscribe to newsletter",
+        label: "Nouveau compte d'un transporteur",
       },
     ],
-  },
+  },*/
 ];
 
 export default platformSettingsData;
