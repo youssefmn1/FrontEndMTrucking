@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Dashboard, Auth } from "@/layouts";
-import { Mapp, TransportRequest } from "./pages/dashboard";
+import { TransportRequest } from "./pages/dashboard";
 
 function App() {
   return (
