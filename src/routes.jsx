@@ -62,12 +62,7 @@ export const routes = [
         path: "/map",
         element: <Mapp />,
       },
-      {
-        icon: <InformationCircleIcon {...icon} />,
-        name: "notifications",
-        path: "/notifications",
-        element: <Notifications />,
-      },
+
     ],
   },
   {
