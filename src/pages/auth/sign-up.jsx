@@ -14,6 +14,7 @@ export function SignUp() {
     phoneNumber: '',
     password: '',
     confirmPassword: '',
+    accountType: '', // Ensure accountType is included
   });
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [errors, setErrors] = useState({});
@@ -76,6 +77,8 @@ export function SignUp() {
           <Typography variant="paragraph" color="blue-gray" className="text-lg font-normal">Enter your details to register.</Typography>
         </div>
         <form onSubmit={handleSubmit} className="mt-8 mb-2 mx-auto w-80 max-w-screen-lg lg:w-1/2">
+          
+          {/* Username Field */}
           <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
               Username
@@ -91,6 +94,8 @@ export function SignUp() {
             />
             {errors.username && <Typography variant="small" color="red" className="text-xs">{errors.username}</Typography>}
           </div>
+
+          {/* First Name Field */}
           <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
               First Name
@@ -106,6 +111,8 @@ export function SignUp() {
             />
             {errors.firstName && <Typography variant="small" color="red" className="text-xs">{errors.firstName}</Typography>}
           </div>
+
+          {/* Last Name Field */}
           <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
               Last Name
@@ -121,6 +128,8 @@ export function SignUp() {
             />
             {errors.lastName && <Typography variant="small" color="red" className="text-xs">{errors.lastName}</Typography>}
           </div>
+
+          {/* CIN Number Field */}
           <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
               CIN Number
@@ -137,6 +146,26 @@ export function SignUp() {
             {errors.cinNumber && <Typography variant="small" color="red" className="text-xs">{errors.cinNumber}</Typography>}
           </div>
 
+          {/* Gender Field */}
+          <div className="mb-1 flex flex-col gap-6">
+            <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+              Gender
+            </Typography>
+            <Select
+              size="lg"
+              label="Select Gender"
+              className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+              value={formData.gender}
+              onChange={(value) => setFormData({ ...formData, gender: value })}
+            >
+              <Option value="male">Male</Option>
+              <Option value="female">Female</Option>
+              <Option value="other">Other</Option>
+            </Select>
+            {errors.gender && <Typography variant="small" color="red" className="text-xs">{errors.gender}</Typography>}
+          </div>
+
+          {/* Email Field */}
           <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
               Email
@@ -152,6 +181,8 @@ export function SignUp() {
             />
             {errors.email && <Typography variant="small" color="red" className="text-xs">{errors.email}</Typography>}
           </div>
+
+          {/* Phone Number Field */}
           <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
               Phone Number
@@ -167,6 +198,8 @@ export function SignUp() {
             />
             {errors.phoneNumber && <Typography variant="small" color="red" className="text-xs">{errors.phoneNumber}</Typography>}
           </div>
+
+          {/* Account Type Field */}
           <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
               Account Type
@@ -183,6 +216,8 @@ export function SignUp() {
             </Select>
             {errors.accountType && <Typography variant="small" color="red" className="text-xs">{errors.accountType}</Typography>}
           </div>
+
+          {/* Password Field */}
           <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
               Password
@@ -199,6 +234,8 @@ export function SignUp() {
             />
             {errors.password && <Typography variant="small" color="red" className="text-xs">{errors.password}</Typography>}
           </div>
+
+          {/* Confirm Password Field */}
           <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
               Confirm Password
@@ -215,20 +252,15 @@ export function SignUp() {
             />
             {errors.confirmPassword && <Typography variant="small" color="red" className="text-xs">{errors.confirmPassword}</Typography>}
           </div>
+
+          {/* Terms and Conditions */}
           <Checkbox
             checked={termsAccepted}
             onChange={handleCheckboxChange}
             label={
-              <Typography
-                variant="small"
-                color="gray"
-                className="flex items-center justify-start font-medium"
-              >
+              <Typography variant="small" color="gray" className="flex items-center justify-start font-medium">
                 I agree to the&nbsp;
-                <a
-                  href="#"
-                  className="font-normal text-black transition-colors hover:text-gray-900 underline"
-                >
+                <a href="#" className="font-normal text-black transition-colors hover:text-gray-900 underline">
                   Terms and Conditions
                 </a>
               </Typography>
@@ -236,17 +268,17 @@ export function SignUp() {
             containerProps={{ className: "-ml-2.5" }}
           />
           {errors.termsAccepted && <Typography variant="small" color="red" className="text-xs">{errors.termsAccepted}</Typography>}
+
+          {/* Submit Button */}
           <Button type="submit" className="mt-6" fullWidth disabled={!termsAccepted}>
             Register Now
           </Button>
 
-
-        <Typography variant="paragraph" className="text-center text-blue-gray-500 font-medium mt-4">
-            Already have an account?
+          <Typography variant="paragraph" className="text-center text-blue-gray-500 font-medium mt-4">
+            Already have an account? 
             <Link to="/auth/sign-in" className="text-gray-900 ml-1">Sign in</Link>
           </Typography>
         </form>
-
       </div>
     </section>
   );

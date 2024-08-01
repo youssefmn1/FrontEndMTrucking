@@ -8,5 +8,5 @@ export * from "@/pages/dashboard/transporteurs"
 export * from "@/pages/dashboard/expediteurs"
 export * from "@/pages/dashboard/map"
 export * from "@/pages/dashboard/formDemandeTransport"
-
+export * from "@/pages/dashboard/activerequests"
 

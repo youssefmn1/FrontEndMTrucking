@@ -8,10 +8,10 @@ import {
   RectangleStackIcon,
   UserIcon,
   MapIcon,
+  ClipboardDocumentIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Notifications, ProfileExpediteur, ProfileAdmin, ProfileTransporteur, TransporteursTable, ExpediteursTable, Mapp } from "@/pages/dashboard";
+import { Home, Notifications, ProfileExpediteur, ProfileAdmin, ProfileTransporteur, TransporteursTable, ExpediteursTable, Mapp,ActiveRequests} from "@/pages/dashboard";
 import { SignIn, SignUp } from "@/pages/auth";
-
 const icon = {
   className: "w-5 h-5 text-inherit",
 };
@@ -33,17 +33,11 @@ export const routes = [
         element: <ProfileAdmin />,
       },
       {
-        icon: <UserCircleIcon {...icon} />,
-        name: "Profile Expediteur",
-        path: "/expediteur",
-        element: <ProfileExpediteur />,
-      },
-      {
         icon: <TruckIcon {...icon} />,
-        name: "Profile Transporteur",
-        path: "/transporteur",
-        element: <ProfileTransporteur />,
-      },     
+        name: "Transporteurs",
+        path: "/transporteurList",
+        element: <TransporteursTable />,
+      },
       {
         icon: <TableCellsIcon {...icon} />,
         name:"Expediteurs",
@@ -51,18 +45,30 @@ export const routes = [
         element: <ExpediteursTable />,
       },
       {
-        icon: <TruckIcon {...icon} />,
-        name: "Transporteurs",
-        path: "/transporteurList",
-        element: <TransporteursTable />,
+        icon: <UserCircleIcon {...icon} />,
+        name: "Profile Expediteur",
+        path: "/expediteur",
+        element: <ProfileExpediteur />,
       },
+      {
+        icon: <UserCircleIcon {...icon} />,
+        name: "Profile Transporteur",
+        path: "/transporteur",
+        element: <ProfileTransporteur />,
+      },     
+      
       {
         icon: <MapIcon {...icon} />,
         name: "Map",
         path: "/map",
         element: <Mapp />,
       },
-
+      {
+       icon: <ClipboardDocumentIcon {...icon} />,
+        name: "Demandes Active",
+        path: "/activerequests",
+        element: <ActiveRequests/>,
+      },
     ],
   },
   {

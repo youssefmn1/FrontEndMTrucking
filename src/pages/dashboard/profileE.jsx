@@ -20,7 +20,6 @@ import { Link } from "react-router-dom";
 import { ProfileInfoCard } from "@/widgets/cards";
 import { platformSettingsDataExp, projectsTableData } from "@/data";
 
-
 export function ProfileExpediteur() {
   return (
     <>
@@ -117,11 +116,11 @@ export function ProfileExpediteur() {
                 className="h-full" // Ensure the ProfileInfoCard uses full height
               />
             </div>
-              <Link to={"../demande_transport"} className="block">
-                <Button variant="gradient" color="blue" >
-                    Faire une demande de transport
-                </Button>
-              </Link>      
+            <Link to={"../demande_transport"} className="block">
+              <Button variant="gradient" color="blue">
+                Faire une demande de transport
+              </Button>
+            </Link>
           </div>
           
           <div className="px-4 pb-4">
@@ -139,7 +138,7 @@ export function ProfileExpediteur() {
                 <table className="w-full min-w-[640px] table-auto">
                   <thead>
                     <tr>
-                      {["Départ", "Destination", "Date", "Type de Marchandise", "Poids", "Type de Remorque"].map(
+                      {["Départ", "Destination", "Date", "Type de Marchandise", "Poids", "Type de Remorque", "Prix"].map(
                         (el) => (
                           <th
                             key={el}
@@ -164,6 +163,9 @@ export function ProfileExpediteur() {
                             ? ""
                             : "border-b border-blue-gray-50"
                         }`;
+
+                        // Define static prices here
+                        const price = `$${(Math.random() * 1000 + 100).toFixed(2)}`;
 
                         return (
                           <tr key={depart + destination + date}>
@@ -219,6 +221,15 @@ export function ProfileExpediteur() {
                                 className="font-bold"
                               >
                                 {typeRemorque}
+                              </Typography>
+                            </td>
+                            <td className={className}>
+                              <Typography
+                                variant="small"
+                                color="blue-gray"
+                                className="font-bold"
+                              >
+                                {price}
                               </Typography>
                             </td>
                           </tr>
